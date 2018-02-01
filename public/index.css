@@ -1,0 +1,277 @@
+@import "bootstrap-social.less";
+body {
+  overflow:  hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+}
+.alert {
+  word-wrap: break-word;
+}
+.btn {
+  cursor: pointer;
+}
+.names {
+  text-align: center;
+  z-index: 40;
+}
+.App {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #f4f4f4;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.forms {
+  position: fixed;
+  width:100%;
+  height:100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  overflow:hidden;
+  z-index: 50;
+}
+.min-form {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  top: 40%;
+  text-align: center;
+}
+.max-form {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+  top: 40%;
+  text-align: center;
+}
+
+/* Authorization */
+
+.authorization-method {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+  top: 40%;
+}
+.facebook-login {
+  background: #4267b2 url(https://www.facebook.com/rsrc.php/v3/yy/r/uPlIYLfynqH.png) no-repeat 10px;
+  background-size: 25px;
+  width: 300px;
+  height: 38px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* User page */
+
+.new-chat {
+  text-align: center;
+  cursor: pointer;
+}
+.user-data {
+  left: 0;
+  top: 50px;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.signout {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 50px;
+  z-index: 40;
+  background-color: #f5c6cb;
+  text-align: center;
+  padding: 12px;
+  border: 1px solid rgba(0,0,0,.125);
+  cursor: pointer;
+}
+.signout:hover {
+  background-color: #f7bec4;
+}
+.name {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  z-index: 40;
+  background-color: #fff;
+  text-align: center;
+  padding: 12px;
+  border: 1px solid rgba(0,0,0,.125);
+  cursor: pointer;
+}
+.name:hover {
+  background-color: #efefef;
+}
+.user-avatar {
+  position: relative;
+  max-width: 200px;
+  max-height: 200px;
+  margin: auto;
+}
+.avatar-img {
+  width: 200px;
+  height: 200px;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.all-chats {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.chats {
+  margin-top: 250px;
+  display: block;
+  margin-bottom: 50px;
+}
+
+/* Chat room */
+
+.chat-room {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.chat-name {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,.125);
+}
+.subscribers-length {
+  height: 19px;
+  position: fixed;
+  z-index: 41;
+  margin: 0 auto;
+  text-align: top;
+  left: 48%;
+  font-size: 13px;
+  color: #007bff;
+  cursor: pointer;
+}
+.subscribers {
+  position: relative;
+  max-width: 100px;
+  margin: 0 auto;
+  top: 20px;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 3px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.subscriber {
+  position: relative;
+  max-width: 100px;
+  display: block;
+  padding: 3px;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  cursor: pointer;
+  word-wrap: break-word;
+  padding-left: 10px;
+}
+.to-main {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  background-color: #d6d8d9;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+.to-main:hover {
+  background-color: #c2c5c6;
+}
+
+.chat-messages {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.messages {
+  position: fixed;
+  display: block;
+  top: 60px;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.block-messages {
+  position: relative;
+  width: 100%;
+  display: block;
+  padding-bottom: 150px;
+}
+.this-user-message {
+  position: relative;
+  width: 100%;
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+.another-user-message {
+  position: relative;
+  width: 100%;
+  margin-bottom: 25px;
+  border-radius: 5px;
+}
+.this-user-message-inwards {
+  margin-left: 38%;
+  width: 60%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #ccc;
+}
+.another-user-message-inwards {
+  margin-left: 2%;
+  width: 60%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #ccc;
+}
+.no-img {
+  position: absolute;
+  width: 50px;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+.avatar-img-mini {
+  min-width: 50px;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.new-message {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  text-align: center;
+}
+
+.joinde-member {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  z-index: 50;
+}
