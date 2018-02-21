@@ -58,9 +58,9 @@ class NewMessage extends Component {
   render() {
     let send = <div>
                 <input type="text" className='form-control' placeholder="Enter text" onChange={this.changeText} ref={(input => { this.inputText = input })}></input>
-                <div className='btn list-group-item list-group-item-info' onClick={() => this.submitMessage()}>Send</div>
+                <div className='btn list-group-item list-group-item-success' onClick={() => this.submitMessage()}>Send</div>
                </div>;
-    let subscribe = <div className='btn list-group-item list-group-item-success' onClick={() => this.subscribe()}>Subscribe</div>;
+    let subscribe = <div className='btn list-group-item list-group-item-info' onClick={() => this.subscribe()}>Subscribe</div>;
     return (
       <div className="new-message">
       { this.state.isSubscribe ? send : subscribe }

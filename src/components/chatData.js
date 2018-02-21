@@ -15,7 +15,6 @@ class ChatData extends Component {
   }
   componentDidMount() {
     this.time = false;
-    this.members = this.props.chat.members.length;
   }
   componentWillMount() {
     setTimeout(function() {
@@ -44,15 +43,18 @@ class ChatData extends Component {
     })
   }
   render() {
-    let subscribers = this.props.chat.members.map((member) => {
-        return (
-           <div key={member._id} className='subscriber'>{member.name}</div>
-        )
-      })
+    let subscribers
+    if (this.props.chat.members) {
+      subscribers = this.props.chat.members.map((member) => {
+          return (
+             <div key={member._id} className='subscriber'>{member.name}</div>
+          )
+        })
+    }
     return (
       <div>
         <div className="names chat-name">{ this.props.chat.name }
-        <div className='subscribers-length' onClick={() => this.checkMembers()} > subscribers: {this.props.chat.members.length}
+        <div className='subscribers-length' onClick={() => this.checkMembers()} > Subscribers: {this.props.chat.members ? this.props.chat.members.length : 0}
         </div>
         {this.state.subscribers ? <div className='subscribers'onMouseLeave={() => this.checkMembers()} >{ subscribers }</div> : ''}
           <div className="to-main" onClick={() => this.toMain()}>{'<'}</div>

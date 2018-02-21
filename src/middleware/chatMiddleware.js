@@ -10,7 +10,6 @@ const chatMiddleware = store => next => action => {
       fetch('http://localhost:8000/api/v1/auth/' + action.init.authMethod, action.init)
       .then(response => response.json())
       .then(response => {
-        console.log(response);
         if (response.token) {
           localStorage.setItem('token', response.token);
           io = Singleton.init();
@@ -60,7 +59,6 @@ const chatMiddleware = store => next => action => {
       fetch('http://localhost:8000/api/v1/chats/' + action.payload.id, action.payload)
       .then(responseToChat => responseToChat.json())
       .then(responseToChat => {
-        console.log(responseToChat);
         fetch('http://localhost:8000/api/v1/chats/' + action.payload.id + '/messages' , action.payload)
         .then(responseToMessages => responseToMessages.json())
         .then(responseToMessages => {

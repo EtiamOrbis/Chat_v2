@@ -1,23 +1,35 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import UserJoined from '../components/userJoined';
-
 class JoinAlert extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      newJoin: true
+    }
+    this.removeName = this.removeName.bind(this);
   }
-  componentDidMount() {
-    console.log(this.props.chat);
-  }
-  componentDidUpdate() {
-    console.log(this.props.chat.newMember);
-  }
+  removeName() {
+    console.log(this.props.chat.newMember.name);
+    this.setState({
+      newJoin: !this.state.newJoin
+    });
+    setTimeout(
+      function() {
+        if (!this.props.chat.newMember.name && !this.state.newJoin) {
+          this.setState({
+            newJoin: true
+          });
+        }}.bind(this), 2000);
+      }
   render() {
-    console.log('render');
+    let joinedMember;
+    if (this.state.newJoin && this.props.chat.newMember.name) {
+      joinedMember = <div key={this.props.chat.newMember._id} className='joinde-member'> + {this.props.chat.newMember.name}</div>
+    }
     return (
-      <div>
-      {this.props.chat.newMember._id ? <div key={this.props.chat.newMember._id} className='joinde-member'>{this.props.chat.newMember.name} just joined</div> : <div className='joinde-member'></div>}
+      <div onClick={() => this.removeName()}>
+      {this.props.chat.newMember._id ? joinedMember : <div className='joinde-member'></div>}
       </div>
     );
   }

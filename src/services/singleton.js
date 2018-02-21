@@ -19,7 +19,7 @@ var Events = (function () {
       return (store.dispatch({type: types.CHAT_GET_MEMBERS, payload:data}), UserJoined.getNewUser(data));
   }
   function onUserLeave(data) {
-      return (console.log('onUserLeave', data));
+      return 
   }
 
     return {

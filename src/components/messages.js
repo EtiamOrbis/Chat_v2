@@ -30,7 +30,7 @@ class Messages extends Component {
                   <div className={message.author._id === this.state.user ? 'author-data' : 'not-author-data'}>
                     <div className='no-img'>{message.author.avatar ? '' : message.author.name[0]}</div>
                     <img className="rounded-left avatar-img-mini" src={message.author.avatar ? 'http://localhost:8000/static/' + message.author.avatar : 'http://localhost:8000/static/blue.png'} alt="not found"></img>
-                    { message.author.name}
+                    <span className="author-name">{message.author.name}</span>
                   </div>
                   <div className='alert alert-light'>{message.text}</div>
                 </div>
