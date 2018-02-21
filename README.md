@@ -7,7 +7,7 @@ $ npm start
 
 ## Screenshots
 
-![Authorization](D:\projects\chat\1.png)
+![Authorization](https://vk.com/im?sel=89249644&z=photo105830861_456239098%2Fmail10826)
 
 ![Main page](D:\projects\chat\2.png)
 
