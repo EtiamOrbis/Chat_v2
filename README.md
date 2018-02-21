@@ -7,9 +7,11 @@ $ npm start
 ```
 
 ## Screenshots
-```
 
 ...
-![Mockup for feature A](http://monosnap.com/image/bOcxxxxLGF.png)
+<--Collected image definitions-->
+[MockupA]: http://monosnap.com/image/bOcxxxxLGF.png "Screenshot of Feature A mockup"
 ...
-```
+<!--Using an image reference-->
+![Mockup for feature A][MockupA]
+...
