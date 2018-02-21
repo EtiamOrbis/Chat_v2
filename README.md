@@ -7,10 +7,10 @@ $ npm start
 
 ## Screenshots
 
-![Authorization](https://vk.com/doc105830861_459834947?hash=a0874aade77aadeea5&dl=3115439b39ddcff3a8)
+![Authorization](D:\projects\chat\1.png)
 
-![Main page](https://vk.com/doc105830861_459834948?hash=5be307e742ac7d9b64&dl=69c0b6520095d395db)
+![Main page](D:\projects\chat\2.png)
 
-![List of chats](https://vk.com/doc105830861_459834950?hash=c4df19108d65cc2e73&dl=dc6cf65b1d79d5cc33)
+![List of chats](D:\projects\chat\3.png)
 
-![Chat](https://vk.com/doc105830861_459834949?hash=2eeca4c198ea479009&dl=d2e7e73ea803c1a6b9)
+![Chat](D:\projects\chat\4.png)
