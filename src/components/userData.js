@@ -47,7 +47,9 @@ class UserData extends Component {
                   <div className="name" onClick={() => this.signout()}>{ this.props.user.name }</div>
                   { signOut }
                     <div className="user-avatar">
-                      <img className="avatar-img" src={'http://localhost:8000/static/'+this.props.user.avatar} alt="img not found"></img>
+                    {this.props.user.avatar ?
+                      <img className="avatar-img" src={'http://localhost:8000/static/'+this.props.user.avatar} alt='img not found'></img> :
+                      <div className='no-img-userPage'>{this.props.user.avatar ? '' : this.props.user.name[0]}</div>}
                     </div>
                  </div>
     }

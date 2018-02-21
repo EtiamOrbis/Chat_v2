@@ -10,7 +10,6 @@ class JoinAlert extends Component {
     this.removeName = this.removeName.bind(this);
   }
   removeName() {
-    console.log(this.props.chat.newMember.name);
     this.setState({
       newJoin: !this.state.newJoin
     });

@@ -53,12 +53,8 @@ class Auth extends Component {
       body: JSON.stringify(payload),
       headers: getHeaders()
     }
-    if (this.state.name && this.state.email && this.state.avatar) {
-      if(this.state.avatar.search(/jpg/ || /png/ || /gif/ || /svg/) >= 0) {
-        this.props.newUser(myInit);
-      } else {
-        alert('invalid avatar url')
-      }
+    if (this.state.name && this.state.email) {
+      this.props.newUser(myInit);
     }
   }
   regForm() {
@@ -78,7 +74,7 @@ class Auth extends Component {
                     <div className={this.width > 500 ? 'max-form' : 'min-form'}>
                       <input type="text" className='form-control' placeholder="Enter your name" onChange={this.changeName} ref={(input => { this.inputName = input })}></input>
                       <input type="text" className='form-control' placeholder="Enter your email" onChange={this.changeEmail} ref={(input => { this.inputEmail = input })}></input>
-                      <input type="text" className='form-control' placeholder="Enter your Avatar url" onChange={this.changeAvatar} ref={(input => { this.inputAvatar = input })}></input>
+                      <input type="text" className='form-control' placeholder="Enter your avatar url (not necessary)" onChange={this.changeAvatar} ref={(input => { this.inputAvatar = input })}></input>
                       <button type="button" style={{width: '50%'}} className="btn btn-success" onClick={this.submitUserData.bind(this)}>Continue</button>
                       <button type="button" style={{width: '50%'}} className="btn btn-info" onClick={this.getBack.bind(this)}>Cancel</button>
                     </div>
